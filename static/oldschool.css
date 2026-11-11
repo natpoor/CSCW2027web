@@ -1,0 +1,315 @@
+/*
+  CSCW '27 alternate old-school theme.
+  This stylesheet is loaded only with hugo-oldschool.toml.
+*/
+
+html,
+body {
+  background: #d8d8d8;
+}
+
+body {
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.container,
+.container.center {
+  width: 100%;
+  max-width: 900px;
+  padding: 30px 24px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: block;
+  text-align: center;
+}
+
+.header__logo {
+  display: block;
+}
+
+.header__logo::after {
+  display: none;
+}
+
+.header__logo > a,
+.header__logo > a:hover,
+.header__logo > a:focus-visible {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  padding: 0;
+  background: transparent;
+  color: #000;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.logo::before {
+  content: "ACM SIGCHI";
+  display: block;
+  margin-bottom: 12px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.menu--mobile {
+  display: none;
+}
+
+.navigation-menu {
+  justify-content: center;
+  margin: 22px 0 30px;
+  padding: 8px 0;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+  font-size: 1rem;
+}
+
+.navigation-menu__inner {
+  flex: 0 1 auto;
+  justify-content: center;
+  gap: 24px;
+}
+
+.navigation-menu a,
+.navigation-menu .menu__trigger {
+  color: #0000ee;
+  font-weight: 400;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.menu__dropdown {
+  background: #eee;
+  color: #000;
+  border: 1px solid #555;
+  box-shadow: 4px 4px 0 #999;
+  font-family: "Times New Roman", Times, serif;
+}
+
+a,
+.post-content a {
+  color: #0000ee;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover,
+a:focus-visible {
+  color: #cc0000;
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0;
+}
+
+.post-title {
+  --border: 1px solid #777;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  color: #000;
+  font-size: 2.1rem;
+  line-height: 1.15;
+}
+
+.post-title::before,
+.post-title::after {
+  display: none;
+}
+
+.post-title a,
+.post-title a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.post-meta {
+  margin-bottom: 24px;
+  color: #333;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.post-content {
+  margin-top: 0;
+}
+
+.home-page .post-content h1:first-of-type {
+  margin: 22px 0 12px;
+  color: #000;
+  font-size: 2.35rem;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.inline-heading {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.inline-heading h1,
+.inline-heading h2,
+.inline-heading p {
+  display: inline;
+  margin: 0;
+}
+
+.inline-heading h1::after,
+.inline-heading h2::after {
+  content: " ";
+}
+
+.home-updates {
+  margin: 0 0 26px;
+}
+
+.home-updates h2 {
+  margin-bottom: 10px;
+}
+
+.home-updates time {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+hr {
+  height: 0;
+  margin: 24px 0;
+  border: 0;
+  border-top: 1px solid #777;
+  background: transparent;
+}
+
+figure,
+figure.center,
+figure.left,
+figure.right {
+  margin: 24px auto;
+}
+
+figure img {
+  border: 1px solid #555;
+}
+
+figure figcaption,
+figure figcaption.center {
+  padding: 5px 8px;
+  margin-top: 0;
+  border: 1px solid #777;
+  border-top: 0;
+  background: #eee;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.post-content > div:has(> .attend-hotel-image) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 38%);
+  column-gap: 28px;
+  align-items: start;
+}
+
+.post-content > div:has(> .attend-hotel-image) > :not(.attend-hotel-image) {
+  grid-column: 1;
+}
+
+.attend-hotel-image {
+  grid-column: 2;
+  grid-row: 1 / span 20;
+  margin: 0;
+}
+
+.organizing-committee-page .post-content h2:not(:first-child) {
+  margin-top: 34px;
+}
+
+.organizing-committee-page .post-content h2 {
+  margin-bottom: 0;
+}
+
+.organizing-committee-page .post-content h2 + p {
+  margin-top: 3px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 12px;
+  border-top: 1px solid #777;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  opacity: 1;
+  text-align: center;
+}
+
+.footer a,
+.footer a:visited {
+  color: #0000ee;
+}
+
+@media (max-width: 684px) {
+  body {
+    font-size: 17px;
+  }
+
+  .container,
+  .container.center {
+    padding: 20px 16px;
+  }
+
+  .logo {
+    font-size: 2.2rem;
+  }
+
+  .menu--desktop {
+    display: flex;
+  }
+
+  .navigation-menu__inner {
+    gap: 10px 18px;
+  }
+
+  .home-page .post-content h1:first-of-type {
+    font-size: 1.9rem;
+  }
+
+  .post-content > div:has(> .attend-hotel-image) {
+    display: block;
+  }
+
+  .attend-hotel-image {
+    margin-top: 20px;
+  }
+}

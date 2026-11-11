@@ -1,0 +1,102 @@
+baseURL = "https://cscw.acm.org/2027/"
+defaultContentLanguage = "en"
+title = "CSCW '27"
+theme = "re-terminal"
+pagination.pagerSize = 5
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", "date", "publishDate"]
+
+[params]
+  # The main custom stylesheet is processed from assets/css/style.css.
+  contentTypeName = "blog"
+  themeColor = "paper"
+  showMenuItems = 5
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = true
+  readingTime = false
+  oneHeadingSize = false
+
+[params.logo]
+  # There is also another setting for this below! This one does... nothing?
+  logoText = "CSCW '27"
+  logoHomeLink = "/2027/"
+  
+
+#[params.banner]
+#  dismissible = true
+#  text = "Welcome — this site is ready for your words."
+
+[languages]
+  [languages.en]
+    locale = "en-US"
+  [languages.en.params]
+    title = "CSCW '27"
+    subtitle = "Computer Supported Cooperative Work"
+    keywords = ""
+    copyright = ""
+    menuMore = "Show more"
+    readMore = "Read more"
+    readOtherPosts = "Read other posts"
+
+  [languages.en.params.logo]  # THIS ONE IS THE ONE THAT SEEMS TO ACTUALLY WORK
+    logoText = "CSCW '27"
+    logoHomeLink = "/2027/"
+
+  [languages.en.menu]
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/"
+      weight = 5
+
+    [[languages.en.menu.main]]
+      identifier = "submit"
+      name = "Submit"
+      url = "/submit/"
+      weight = 10
+
+    [[languages.en.menu.main]]
+      identifier = "attend"
+      name = "Attend"
+      url = "/attend/"
+      weight = 20
+
+    # [[languages.en.menu.main]]
+    #   identifier = "blog"
+    #   name = "Blog"
+    #   url = "/blog/"
+    #   weight = 30
+
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/about/"
+      weight = 40
+
+    [[languages.en.menu.main]]
+      identifier = "organizing-committee"
+      name = "Organizing Committee"
+      url = "/about/organizing-committee/"
+      parent = "about"
+      weight = 10
+
+    # [[languages.en.menu.main]]
+    #   identifier = "program-committee"
+    #   name = "Program Committee"
+    #   url = "/about/program-committee/"
+    #   parent = "about"
+    #   weight = 20
+
+    [[languages.en.menu.main]]
+      identifier = "code-of-conduct"
+      name = "Code of Conduct"
+      url = "/about/code-of-conduct/"
+      parent = "about"
+      weight = 30
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+

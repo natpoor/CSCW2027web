@@ -1,0 +1,314 @@
+:root {
+  --link-color: #008068;
+  --article-link-color: var(--link-color);
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 1000;
+  padding: 8px 12px;
+  transform: translate(-50%, -200%);
+  border: 3px solid var(--color);
+  background: var(--accent);
+  color: var(--color);
+  font-weight: bold;
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 0);
+}
+
+/* Darken links without changing the theme's lighter green accent. */
+a {
+  color: var(--link-color);
+}
+
+.home-page .post-content h1:first-of-type,
+body:has(.content > article.post + .posts)
+  .content > article.post:first-child
+  .post-content h1:first-of-type {
+  font-size: clamp(2.75rem, 7vw, 3.25rem);
+  margin: 20px 0 0;
+  line-height: 1;
+  letter-spacing: -0.06em;
+  text-wrap: balance;
+}
+
+/* Match standalone page headings to the 2rem Blog heading. */
+.post-title,
+.post-content h1,
+.post-content h2 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+/* Use dark blue for headings and light green for the dotted title divider. */
+h1,
+h2 {
+  color: var(--color);
+}
+
+h1 a,
+h1 a:visited,
+h1 a:hover,
+h1 a:focus-visible,
+h2 a,
+h2 a:visited,
+h2 a:hover,
+h2 a:focus-visible {
+  color: var(--color);
+  text-decoration-color: var(--color);
+}
+
+.post-title {
+  --border: 3px dotted var(--accent);
+  color: var(--color);
+}
+
+.post-title::before {
+  content: "";
+  display: inline-block;
+  width: 0.62em;
+  height: 0.78em;
+  margin-right: 0.2em;
+  background: #ff99cc;
+  vertical-align: -0.02em;
+  pointer-events: none;
+}
+
+/* Let a styled heading flow directly into its accompanying paragraph. */
+.inline-heading {
+  margin: 0;
+  padding: 0 0 10px;
+}
+
+.inline-heading h1,
+.inline-heading h2,
+.inline-heading p {
+  display: inline;
+  margin: 0;
+}
+
+.inline-heading h1{
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.inline-heading h2 {
+  font-size: 1.4rem;
+  line-height: 1.0;
+}
+
+.inline-heading h1::after,
+.inline-heading h2::after {
+  content: " ";
+}
+
+/* Match horizontal rules to the double dotted post-title divider. */
+hr {
+  height: 0;
+  margin: 15px 0;
+  border: 0;
+  border-top: 3px dotted var(--accent);
+  background: transparent;
+}
+
+/* Compact homepage update list, inspired by the CSCW news format. */
+.home-updates {
+  margin: 0 0 20px;
+}
+
+.home-updates h2 {
+  font-size: 2rem;
+  margin: 0 0 16px;
+}
+
+.home-updates li {
+  margin-bottom: 10px;
+}
+
+.home-updates time {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Use dark blue for dates, authors, and reading-time metadata. */
+.post-meta {
+  color: var(--color);
+}
+
+/* Use dark blue for the footer text and links. */
+.footer,
+.footer a {
+  color: var(--color);
+}
+
+figure figcaption {
+  background: var(--accent);
+  color: var(--color);
+}
+
+figure figcaption a,
+figure figcaption a:visited,
+figure figcaption a:hover,
+figure figcaption a:focus-visible {
+  color: inherit;
+  text-decoration-color: currentColor;
+}
+
+.footer {
+  opacity: 1;
+  margin-top: 40px;
+  border-top: 2px solid var(--accent);
+  padding-top: 20px;
+}
+
+/* Replace re-Terminal's heading anchor marker with link underlines. */
+.hanchor {
+  display: none;
+}
+
+a:hover,
+a:focus-visible {
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible,
+.menu__trigger:focus-visible {
+  outline: 3px solid var(--color);
+  outline-offset: 3px;
+}
+
+.logo,
+.header__logo > a,
+.header__logo > a:hover,
+.header__logo > a:focus-visible {
+  color: var(--color);
+}
+
+.header__logo > a:hover,
+.header__logo > a:focus-visible {
+  text-decoration-color: var(--color);
+}
+
+/* Use dark blue for the desktop About menu trigger. */
+.navigation-menu .menu__trigger {
+  color: var(--color);
+}
+
+/* Use dark blue for every desktop and mobile navigation link. */
+.navigation-menu a,
+.navigation-menu a:visited,
+.navigation-menu a:hover,
+.navigation-menu a:focus-visible,
+.menu--mobile a,
+.menu--mobile a:visited,
+.menu--mobile a:hover,
+.menu--mobile a:focus-visible {
+  color: var(--color);
+  text-decoration-color: var(--color);
+}
+
+/* Use dark blue throughout the mobile menu. */
+.menu--mobile .menu__trigger,
+.menu--mobile .menu__dropdown,
+.menu--mobile .menu__dropdown a,
+.menu--mobile .menu__subdrop--title {
+  color: var(--color);
+}
+
+/* Slightly enlarge the site name and navigation. */
+.logo,
+.navigation-menu,
+.menu--mobile {
+  font-size: 1.2rem;
+}
+
+.navigation-menu {
+  margin-bottom: 0;
+}
+
+.post-content > div:has(> .attend-hotel-image) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 40%);
+  column-gap: 30px;
+  align-items: start;
+}
+
+.post-content > div:has(> .attend-hotel-image) > :not(.attend-hotel-image) {
+  grid-column: 1;
+}
+
+.attend-hotel-image {
+  grid-column: 2;
+  grid-row: 1 / span 20;
+  margin: 0;
+}
+
+.attend-hotel-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.home-footer-image,
+.home-footer-image img {
+  width: 100%;
+}
+
+.home-footer-image {
+  margin: 0;
+}
+
+/* Extra separation for figures intentionally placed at the end of a page. */
+.page-bottom-figure {
+  margin-top: 20px;
+}
+
+/* Give committee sections a blank line of visual separation. */
+.organizing-committee-page .post-content h2:not(:first-child) {
+  margin-top: 40px;
+}
+
+.organizing-committee-page .post-content h2 {
+  margin-bottom: 0;
+}
+
+.organizing-committee-page .post-content h2 + p {
+  margin-top: 3px;
+}
+
+.organizing-committee-page a[href^="mailto:"] {
+  color: var(--link-color);
+}
+
+@media (max-width: 684px) {
+  .logo,
+  .menu--mobile {
+    font-size: 1rem;
+  }
+
+  .post-title {
+    margin-top: 10px;
+  }
+
+  .home-page .post-content h1:first-of-type {
+    font-size: 2rem;
+  }
+
+  .post-content > div:has(> .attend-hotel-image) {
+    display: block;
+  }
+
+  .attend-hotel-image {
+    margin-top: 20px;
+  }
+
+}
+

@@ -1,0 +1,5 @@
+# Build this isolated visual variant with:
+# hugo --config hugo.toml,hugo-oldschool.toml --destination public-oldschool
+
+[params]
+  customStylesheet = "oldschool.css"

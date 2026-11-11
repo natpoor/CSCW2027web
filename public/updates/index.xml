@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Updates on CSCW &#39;27</title>
+    <link>//localhost:1313///2027/updates/</link>
+    <description>Recent content in Updates on CSCW &#39;27</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="//localhost:1313///2027/updates/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New site</title>
+      <link>//localhost:1313///2027/updates/welcome/</link>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0700</pubDate>
+      
+      <guid>//localhost:1313///2027/updates/welcome/</guid>
+      <description>&lt;p&gt;The CSCW &amp;lsquo;27 website is now online. Check back for updates as we get closer to the conference. Thanks for clicking through!&lt;/p&gt;</description>
+      <content>&lt;p&gt;The CSCW &amp;lsquo;27 website is now online. Check back for updates as we get closer to the conference. Thanks for clicking through!&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

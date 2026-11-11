@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on CSCW &#39;27</title>
+    <link>//localhost:1313///2027/blog/</link>
+    <description>Recent content in Blog on CSCW &#39;27</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="//localhost:1313///2027/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, world</title>
+      <link>//localhost:1313///2027/blog/hello-world/</link>
+      <pubDate>Thu, 15 Oct 2026 00:00:00 -0700</pubDate>
+      
+      <guid>//localhost:1313///2027/blog/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to the CSCW &amp;lsquo;27 blog. This starter article confirms that blog posts
+appear in the Blog section without appearing on the homepage.&lt;/p&gt;
+&lt;h2 id=&#34;start-writing&#34;&gt;Start writing&lt;/h2&gt;
+&lt;p&gt;Create blog posts in &lt;code&gt;content/blog&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new content blog/my-next-post.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <content>&lt;p&gt;Welcome to the CSCW &amp;lsquo;27 blog. This starter article confirms that blog posts
+appear in the Blog section without appearing on the homepage.&lt;/p&gt;
+&lt;h2 id=&#34;start-writing&#34;&gt;Start writing&lt;/h2&gt;
+&lt;p&gt;Create blog posts in &lt;code&gt;content/blog&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new content blog/my-next-post.md
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+    </item>
+    
+  </channel>
+</rss>

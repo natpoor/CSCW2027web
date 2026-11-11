@@ -1,0 +1,52 @@
+<nav class="navigation-menu" aria-label="Primary navigation">
+  <ul class="navigation-menu__inner menu--desktop">
+    {{ if or $.Site.Params.showMenuItems ( eq .Site.Params.showMenuItems 0 ) }}
+      {{/* Get the first configured number of menu items. */}}
+      {{ range first $.Site.Params.showMenuItems $.Site.Menus.main }}
+        {{ if not .HasChildren }}
+          <li><a href="{{ .URL }}" tabindex="0" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+        {{ else }}
+          <li>
+            <details class="menu">
+              <summary class="menu__trigger">{{ .Name }}<span aria-hidden="true">&nbsp;▾</span></summary>
+              <ul class="menu__dropdown">
+                {{ range .Children }}
+                  <li><a href="{{ .URL }}" tabindex="0" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+            </details>
+          </li>
+        {{ end }}
+      {{ end }}
+      {{ if gt (len $.Site.Menus.main) $.Site.Params.showMenuItems }}
+        <li>
+          <details class="menu">
+            <summary class="menu__trigger">{{ $.Site.Params.MenuMore }}<span aria-hidden="true">&nbsp;▾</span></summary>
+            <ul class="menu__dropdown">
+              {{ range last (sub (len $.Site.Menus.main) $.Site.Params.showMenuItems) $.Site.Menus.main }}
+                {{ if not .HasChildren }}
+                  <li><a href="{{ .URL }}" tabindex="0" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+                {{ else }}
+                  <li class="menu__subdrop">
+                    <span class="menu__subdrop--title">{{ .Name }}</span>
+                    <ul class="menu__subdrop--list">
+                      {{ range .Children }}
+                        <li><a href="{{ .URL }}" tabindex="0" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+                      {{ end }}
+                    </ul>
+                  </li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </details>
+        </li>
+      {{ end }}
+    {{ else }}
+      {{ range $.Site.Menus.main }}
+        {{ if not .HasChildren }}
+          <li><a href="{{ .URL }}" tabindex="0" {{ if .Params.NewTab -}} target="_blank" {{- end }}>{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  </ul>
+</nav>
